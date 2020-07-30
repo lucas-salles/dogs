@@ -10,7 +10,7 @@ import useFetch from "../../hooks/useFetch";
 const LoginCreate = () => {
   const username = useForm();
   const email = useForm("email");
-  const password = useForm("password");
+  const password = useForm();
 
   const { userLogin } = useContext(UserContext);
   const { loading, error, request } = useFetch();
