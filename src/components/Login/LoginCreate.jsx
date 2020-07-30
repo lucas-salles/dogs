@@ -10,7 +10,7 @@ import useFetch from "../../hooks/useFetch";
 const LoginCreate = () => {
   const username = useForm();
   const email = useForm("email");
-  const password = useForm();
+  const password = useForm("password");
 
   const { userLogin } = useContext(UserContext);
   const { loading, error, request } = useFetch();
@@ -34,7 +34,7 @@ const LoginCreate = () => {
         <Input label="Email" type="email" name="email" {...email} />
         <Input label="Senha" type="password" name="password" {...password} />
         {loading ? (
-          <Button disabled>Cadastrando</Button>
+          <Button disabled>Cadastrando...</Button>
         ) : (
           <Button>Cadastrar</Button>
         )}
